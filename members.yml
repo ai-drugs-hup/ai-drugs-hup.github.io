@@ -81,6 +81,7 @@
 - name: Nguyễn Thảo My Kristýna
   role: Student researcher — machine learning
   team: Alumni
+  until: 2026
   # Otherwise computed as NK, from "Nguyễn" and "Kristýna".
   initials: NM
 
