@@ -842,14 +842,6 @@ p,
   }
 }
 
-.gallery-caption {
-  margin: 0.7rem 0 0;
-  max-width: none;
-  font-size: 0.88rem;
-  line-height: 1.5;
-  color: $ink-soft;
-}
-
 @media (prefers-reduced-motion: reduce) {
   .gallery-figure a,
   .gallery-figure a:hover {
