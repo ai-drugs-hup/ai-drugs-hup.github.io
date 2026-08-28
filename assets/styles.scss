@@ -723,3 +723,78 @@ p,
     padding-inline: 0.4rem;
   }
 }
+
+// ── News ───────────────────────────────────────────────────────────────────
+// Rendered from news.yml through assets/news-item.ejs. Deliberately styled from
+// the same values as .repo and .pub-card rather than new ones: three different
+// card treatments on one site reads as three different sites.
+.news-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.75rem 0 2.5rem;
+  display: grid;
+  gap: 1.25rem;
+}
+
+.news-item {
+  background: $card;
+  border: 1px solid $line;
+  border-left: 4px solid $sage;
+  border-radius: 16px;
+  padding: 1.3rem 1.5rem;
+}
+
+.news-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-bottom: 0.45rem;
+}
+
+// The kind and the date are the same size and weight on purpose — neither is more
+// important than the other, and a coral tag here would fight the headline.
+.news-kind,
+.news-when {
+  font-family: $mono-font;
+  font-size: 0.66rem;
+  font-weight: 500;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+.news-kind { color: $coral-deep; }
+.news-when { color: $ink-soft; }
+
+.news-title {
+  font-size: 1.12rem;
+  line-height: 1.35;
+  margin: 0 0 0.5rem;
+  max-width: none;
+
+  a { color: $ink; text-decoration: none; }
+  a:hover { color: $coral-deep; text-decoration: underline; }
+}
+
+.news-summary {
+  margin: 0;
+  max-width: none;
+  font-size: 0.93rem;
+  line-height: 1.6;
+  color: $ink;
+}
+
+.news-more {
+  margin: 0.7rem 0 0;
+  max-width: none;
+  font-size: 0.85rem;
+
+  a {
+    font-family: $mono-font;
+    font-size: 0.72rem;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: $coral-deep;
+    text-decoration: none;
+  }
+  a:hover { text-decoration: underline; }
+}

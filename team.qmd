@@ -32,11 +32,14 @@ listing:
     sort: "name asc"
 ---
 
-The lab is small and mostly made up of students, which is deliberate: the work
-that gets done here is theirs, not a professor's with names attached. Everyone
-approaches the same problem from a different side — designing molecules, testing
-them against physics, and making the ones worth making. The three groupings below
-are where people spend most of their time, not walls between them.
+To the best of our knowledge, we are the only lab in Vietnam comprehensive enough
+to run the whole chain in-house: generative AI that designs molecules, molecular
+dynamics that tests which ones hold up under the physics, and synthetic chemistry
+that actually makes them. That is what lets a result from the bench change a model
+the same week, instead of the next grant cycle.
+
+Almost everyone below is a student, and that is the point: the work is theirs. The
+groupings are where people spend most of their time, not walls between them.
 
 :::: {#pi}
 

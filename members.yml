@@ -13,10 +13,11 @@
 #          last word of the name — wrong when a Western given name is appended.
 #   links  optional. email / scholar / orcid / github
 #
-# ⚠️ Roles below describe what someone works on, not a formal job title. Dr. Dung
-#    confirmed the lab is mostly students, so members carry "Student researcher".
-#    If anyone here is staff rather than a student, correct that line — the word
-#    was applied to everyone except the PI.
+# ⚠️ Roles below describe what someone works on. Dr. Dung confirmed the lab is
+#    mostly students, so members default to "Student researcher".
+#    CONFIRMED individually: Nguyễn Thành Công and Trần Tùng Lâm are master's
+#    students (confirmed by Cong). Everyone else still carries the default and has
+#    NOT been confirmed one by one — correct any line that is wrong.
 
 - name: Đỗ Thị Mai Dung
   role: Head of Unit · Lecturer, Faculty of Pharmaceutical Chemistry and Technology
@@ -25,7 +26,7 @@
     orcid: https://orcid.org/0000-0003-3326-2464
 
 - name: Nguyễn Thành Công
-  role: Student researcher — machine learning
+  role: Master's student — machine learning
   team: AI team
   links:
     orcid: https://orcid.org/0000-0002-6247-8128
@@ -82,9 +83,10 @@
   initials: NM
 
 # ⚠️ Diacritics added by inference from "Nguyen Anh Thu" — confirm the spelling.
-#    No role recorded: she does not appear in the lab's publication list, so
-#    nothing was assumed.
+#    Her area (machine learning) was confirmed by Cong; she does not appear in the
+#    lab's publication list, so the area is what is known and nothing more.
 - name: Nguyễn Anh Thư
+  role: Student researcher — machine learning
   team: Alumni
 
 - name: Trần Thị Thùy Mai
@@ -100,7 +102,7 @@
   team: MD team
 
 - name: Trần Tùng Lâm
-  role: Student researcher — molecular dynamics
+  role: Master's student — molecular dynamics
   team: MD team
 
 - name: Khánh Linh

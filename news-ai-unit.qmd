@@ -1,0 +1,85 @@
+---
+title: "A formal home for computational pharmacy at Hanoi University of Pharmacy"
+---
+
+[University decision · 24 October 2025]{.eyebrow}
+
+::: {.lede}
+On 24 October 2025 the Rector of Hanoi University of Pharmacy, Nguyễn Hải
+Nam, signed Decision 1114/QĐ-DHN establishing the **Unit of Computation and AI
+Application Research** under the Faculty of Pharmaceutical Chemistry and
+Technology. Four days later, Decision 1125/QĐ-DHN assigned Dr. Đỗ Thị Mai Dung the
+duties of Head of the Unit.
+:::
+
+## Why a decision matters
+
+Computational work had been going on in the Faculty for years before this, carried
+by individual projects and individual students. What changed in October 2025 is
+that it acquired a name, a mandate and a place on the University's organisational
+chart. A unit can be given tasks, be held to them, and be built on. A collection
+of side projects cannot.
+
+## What the University asked the unit to do
+
+The decision sets out the unit's function as advising the University and the
+Faculty on organising and carrying out research that applies computation and
+artificial intelligence, in both research and teaching. Its assigned tasks are
+specific, and worth reading as a description of the work rather than as
+administrative language:
+
+::: {.skill-grid}
+::: {.skill}
+### Screening and design
+Build computational and simulation models that identify compounds with potential
+biological activity, aimed at the discovery and development of new drugs.
+:::
+
+::: {.skill}
+### Pharmacokinetics and safety
+Build models that predict pharmacokinetic parameters, toxicity and adverse
+effects — the properties that decide whether an active compound can ever become a
+medicine.
+:::
+
+::: {.skill}
+### Simulation and mechanism
+Apply quantum chemical calculation, molecular-level simulation and binding
+affinity estimation to study how a structure acts on a molecular target, and why.
+:::
+
+::: {.skill}
+### AI on large datasets
+Apply artificial intelligence to network pharmacology and omics data, to find
+therapeutic targets of natural compounds, medicinal materials and traditional
+remedies.
+:::
+
+::: {.skill}
+### Teaching and curriculum
+Advise the Faculty and the University on developing training programmes that build
+digital competence in the relevant fields.
+:::
+
+::: {.skill}
+### People and collaboration
+Connect research groups inside the Faculty and the University, provide
+computational consultancy to groups working on drug development, and run research
+training for school pupils and students in AI applied to medicine and pharmacy.
+:::
+:::
+
+## What it does not say
+
+The mandate is computational throughout. It does not mention chemical synthesis,
+and that is accurate: the capacity to design a compound, make it and test it sits
+in the **Faculty of Pharmaceutical Chemistry and Technology**, where it has existed
+for far longer than the unit has. Roughly half of the group's published work
+reports compounds that were actually made.
+
+The unit's job is the other half of the loop, and the reason the two halves matter
+together is that they share a corridor. A prediction can be checked by the people
+who made the molecule, and what the assay says can change the model in the same
+week. That is the thing being built here, and the October decisions are what made
+it something the University recognises rather than something a few people did after
+hours.

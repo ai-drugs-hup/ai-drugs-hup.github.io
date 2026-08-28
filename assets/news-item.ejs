@@ -1,0 +1,29 @@
+<%
+// The template does its own ordering so the page does not depend on how the
+// listing chose to sort. Newest first, by the `iso` field the data file controls.
+const byDate = (a, b) => String(b.iso || '').localeCompare(String(a.iso || ''));
+const all = items.slice().sort(byDate);
+%>
+<ul class="news-list">
+<% for (const item of all) { %>
+<li class="news-item">
+<div class="news-head">
+<% if (item.kind) { %>
+<span class="news-kind"><%= item.kind %></span>
+<% } %>
+<span class="news-when"><%= item.when %></span>
+</div>
+<h3 class="news-title">
+<% if (item.href) { %>
+<a href="<%= item.href %>"><%= item.title %></a>
+<% } else { %>
+<%= item.title %>
+<% } %>
+</h3>
+<p class="news-summary"><%= item.summary %></p>
+<% if (item.href) { %>
+<p class="news-more"><a href="<%= item.href %>">Read the full story</a></p>
+<% } %>
+</li>
+<% } %>
+</ul>

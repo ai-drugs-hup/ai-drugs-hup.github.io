@@ -1,0 +1,37 @@
+# News items for the PUBLIC website.
+#
+# Ordering is done by the template from the `iso` field, not by file order and
+# not by Quarto's default sort, so an item can be added anywhere in this file.
+#
+# Fields:
+#   title    required.
+#   iso      required. YYYY-MM-DD. Used ONLY for sorting — never displayed, so it
+#            is safe from Quarto reformatting a parsed `date` field.
+#   when     required. The date as it should READ on the page.
+#   kind     optional. Short label above the headline.
+#   summary  required. Two or three sentences; this is what most people will read.
+#   href     optional. A page carrying the full story. Write it as .html, not
+#            .qmd: the template emits raw HTML, which Quarto does not rewrite.
+#            Any such page must ALSO be added to the render whitelist in
+#            _quarto.yml, which is deliberately not a glob.
+
+- title: "Hanoi University of Pharmacy establishes the Unit of Computation and AI Application Research"
+  iso: 2025-10-24
+  when: "24 October 2025"
+  kind: University decision
+  summary: >
+    Decision 1114/QĐ-DHN founded the unit under the Faculty of Pharmaceutical
+    Chemistry and Technology, giving it a formal mandate for computational
+    modelling, prediction of biological activity and pharmacokinetics, quantum and
+    molecular-level simulation, and artificial intelligence applied to large
+    datasets in pharmacy research.
+  href: news-ai-unit.html
+
+- title: "Dr. Đỗ Thị Mai Dung is assigned the duties of Head of the Unit"
+  iso: 2025-10-28
+  when: "28 October 2025"
+  kind: University decision
+  summary: >
+    Four days after the unit was founded, Decision 1125/QĐ-DHN assigned Dr. Đỗ Thị
+    Mai Dung, Lecturer in the Faculty of Pharmaceutical Chemistry and Technology,
+    the duties of Head of the Unit of Computation and AI Application Research.

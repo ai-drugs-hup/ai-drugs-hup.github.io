@@ -1,5 +1,13 @@
 ---
 page-layout: full
+listing:
+  - id: home-news
+    contents: news.yml
+    template: assets/news-item.ejs
+    sort: "iso desc"
+    # Quarto trims to this BEFORE the template runs, so the sort above must match
+    # the template's own ordering or the wrong items get cut.
+    max-items: 2
 include-after-body:
   - text: |
       <script src="assets/hero-structure.js" defer></script>
@@ -85,3 +93,13 @@ The chemistry side of this lab is the older half — compounds designed, made an
 tested here for more than a decade, within the Faculty of Pharmaceutical Chemistry
 and Technology. The computational side is young and moving quickly. Joining them
 completely is the work.
+
+[Latest]{.eyebrow}
+
+## News
+
+:::: {#home-news}
+
+::::
+
+[All news](news.html)

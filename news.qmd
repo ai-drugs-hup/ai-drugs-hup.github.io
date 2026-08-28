@@ -1,0 +1,16 @@
+---
+title: "News"
+listing:
+  - id: news
+    contents: news.yml
+    template: assets/news-item.ejs
+    sort: "iso desc"
+---
+
+::: {.lede}
+What the unit has been recognised for, and what it has been doing since.
+:::
+
+:::: {#news}
+
+::::

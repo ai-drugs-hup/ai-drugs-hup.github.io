@@ -12,12 +12,6 @@ for anything.
 
 ## Software
 
-::: {.callout-note title="One release so far"}
-Most of the lab's code is not public yet. Rather than list private repositories
-that nobody can open, this page shows only what is genuinely available, and grows
-as more is released.
-:::
-
 ::: {.repo-list}
 ::: {.repo}
 ### [ml-guide-hdac](https://github.com/ai-drugs-hup/ml-guide-hdac)
