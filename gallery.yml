@@ -1,0 +1,38 @@
+# Photographs for the PUBLIC website.
+#
+# ⚠️ CAPTIONS BELOW ARE PLACEHOLDERS. They describe only what is visibly in each
+#    frame, because the occasion, place and date of these photographs are not
+#    recorded anywhere in this repo. Replace them with the real thing before
+#    treating this page as finished — a caption that says nothing is better than
+#    one that says something wrong, but neither is good.
+#
+# Ordering is by the `iso` field, newest first, done by the template.
+#
+# Fields:
+#   image    required. Base filename in assets/img/gallery/. The template expects
+#            both <name>.jpg (full) and <name>-thumb.jpg (grid) to exist.
+#   alt      required. Describes the picture for anyone who cannot see it. This is
+#            not the caption and must not be left empty.
+#   caption  required. What a sighted reader is told about the picture.
+#   iso      optional. YYYY-MM-DD, for ordering only. Unknown is fine.
+#
+# Every photograph here shows identifiable people. Adding one is a decision about
+# them, not just about the page.
+
+- image: team-meal
+  alt: >
+    Thirteen members of the unit seated together along one side of a long table in
+    a restaurant, several holding up a tote bag printed with a cartoon design.
+  caption: "The group at a meal together."
+
+- image: team-steps
+  alt: >
+    Fifteen members of the unit standing in two rows on the steps of a large white
+    colonnaded building, one of them holding a bouquet of pink and white flowers.
+  caption: "The group together, away from the laboratory."
+
+- image: team-plaza
+  alt: >
+    Sixteen members of the unit standing in a line across a wide paved plaza, with
+    a colonnaded monument and fountain in the distance behind them.
+  caption: "The whole group, on the same day."

@@ -1,0 +1,15 @@
+---
+title: "Gallery"
+listing:
+  - id: gallery
+    contents: gallery.yml
+    template: assets/gallery-item.ejs
+---
+
+::: {.lede}
+The people behind the work. Click any photograph to see it larger.
+:::
+
+:::: {#gallery}
+
+::::

@@ -15,9 +15,14 @@ project:
     # Each news story page is listed individually and on purpose. The whitelist
     # above must never become a glob — see the comment at the top of this block.
     - news-ai-unit.qmd
+    - gallery.qmd
   resources:
     - favicon.ico
     - assets/structure/
+    # Photographs are referenced from raw HTML emitted by an EJS listing template,
+    # which is not the same code path Quarto uses to discover assets linked from
+    # markdown. Listing them here guarantees they are copied instead of hoping.
+    - assets/img/
     # GitHub Pages reads this from the site root to serve the custom domain.
     - CNAME
 
@@ -40,8 +45,12 @@ website:
         text: Software
       - href: news.qmd
         text: News
+      - href: gallery.qmd
+        text: Gallery
   page-footer:
     center: |
+      <img class="footer-logo" src="/assets/img/hup-logo.png" alt="Hanoi University of Pharmacy">
+
       Unit of Computation and AI Application Research · Faculty of Pharmaceutical
       Chemistry and Technology · Hanoi University of Pharmacy · Hà Nội, Việt Nam
   favicon: favicon.ico

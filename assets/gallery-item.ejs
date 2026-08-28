@@ -1,0 +1,20 @@
+<%
+// Newest first where a date is known; undated items keep their file order at the
+// end. The template sorts so the page does not depend on the listing's choice.
+const withDate = items.filter(i => i.iso);
+const noDate = items.filter(i => !i.iso);
+withDate.sort((a, b) => String(b.iso).localeCompare(String(a.iso)));
+const all = withDate.concat(noDate);
+%>
+<ul class="gallery-grid">
+<% for (const item of all) { %>
+<li class="gallery-item">
+<figure class="gallery-figure">
+<a href="assets/img/gallery/<%= item.image %>.jpg" rel="noopener">
+<img src="assets/img/gallery/<%= item.image %>-thumb.jpg" alt="<%= item.alt %>" loading="lazy" decoding="async">
+</a>
+<figcaption class="gallery-caption"><%= item.caption %></figcaption>
+</figure>
+</li>
+<% } %>
+</ul>

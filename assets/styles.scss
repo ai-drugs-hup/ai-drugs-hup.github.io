@@ -798,3 +798,73 @@ p,
   }
   a:hover { text-decoration: underline; }
 }
+
+// ── Gallery ────────────────────────────────────────────────────────────────
+// Rendered from gallery.yml through assets/gallery-item.ejs. The grid loads the
+// -thumb files; the full image is only fetched if someone clicks a tile.
+.gallery-grid {
+  list-style: none;
+  padding: 0;
+  margin: 1.75rem 0 2.5rem;
+  display: grid;
+  // 460px, not 330px: these are group photographs of a dozen-plus people, and at
+  // a narrower track no face is large enough to recognise. Three across on a wide
+  // screen, one on a phone, handled by auto-fill.
+  grid-template-columns: repeat(auto-fill, minmax(460px, 1fr));
+  gap: 1.75rem;
+}
+
+.gallery-item { margin: 0; }
+
+.gallery-figure {
+  margin: 0;
+
+  a {
+    display: block;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid $line;
+    background: $card;
+    // Transitioned, so it needs the reduced-motion guard below.
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+  }
+  a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(58, 50, 48, 0.13);
+  }
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    // A group photo cropped to a square loses half the group. Keep the frame.
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+}
+
+.gallery-caption {
+  margin: 0.7rem 0 0;
+  max-width: none;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: $ink-soft;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gallery-figure a,
+  .gallery-figure a:hover {
+    transition: none;
+    transform: none;
+  }
+}
+
+// ── Footer logo ────────────────────────────────────────────────────────────
+// The parent institution's mark, above the affiliation line. It reads as
+// attribution rather than as a claim of endorsement, which is why it is here and
+// not in the navbar competing with the lab's own mark.
+.footer-logo {
+  display: block;
+  width: 64px;
+  height: auto;
+  margin: 0 auto 0.85rem;
+}
