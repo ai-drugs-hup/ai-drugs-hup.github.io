@@ -89,10 +89,10 @@ where the work starts. The method is not specific to it. Anywhere there is a
 protein worth acting on, a way to measure success and a chemist willing to make
 the compound, the same loop applies.
 
-The chemistry side of this lab is the older half — compounds designed, made and
-tested here for more than a decade, within the Faculty of Pharmaceutical Chemistry
-and Technology. The computational side is young and moving quickly. Joining them
-completely is the work.
+The chemistry runs deep here — compounds designed, made and tested for more than a
+decade within the Faculty of Pharmaceutical Chemistry and Technology. The
+computational arm brings prediction and simulation to the same bench, and is moving
+fast. Joining them completely is the work.
 
 [Latest]{.eyebrow}
 

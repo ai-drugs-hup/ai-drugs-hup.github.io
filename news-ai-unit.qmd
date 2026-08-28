@@ -12,13 +12,12 @@ Technology. Four days later, Decision 1125/QĐ-DHN assigned Dr. Đỗ Thị Mai 
 duties of Head of the Unit.
 :::
 
-## Why a decision matters
+## What the decision changed
 
-Computational work had been going on in the Faculty for years before this, carried
-by individual projects and individual students. What changed in October 2025 is
-that it acquired a name, a mandate and a place on the University's organisational
-chart. A unit can be given tasks, be held to them, and be built on. A collection
-of side projects cannot.
+Computational research had been building in the Faculty for years, carried by
+projects and by students who kept coming back to it. In October 2025 it was given a
+name, a mandate and a place on the University's organisational chart — which means
+it can be assigned work, resourced and built on.
 
 ## What the University asked the unit to do
 
@@ -69,17 +68,14 @@ training for school pupils and students in AI applied to medicine and pharmacy.
 :::
 :::
 
-## What it does not say
+## Where the chemistry comes in
 
-The mandate is computational throughout. It does not mention chemical synthesis,
-and that is accurate: the capacity to design a compound, make it and test it sits
-in the **Faculty of Pharmaceutical Chemistry and Technology**, where it has existed
-for far longer than the unit has. Roughly half of the group's published work
-reports compounds that were actually made.
+The unit's mandate is computational, and it sits inside the **Faculty of
+Pharmaceutical Chemistry and Technology**, which has been designing, making and
+testing compounds for more than a decade — around half of the group's published work
+reports molecules that were actually synthesised. That proximity is the point. A
+prediction gets checked by the people who made the molecule, and what the assay
+says can change the model the same week.
 
-The unit's job is the other half of the loop, and the reason the two halves matter
-together is that they share a corridor. A prediction can be checked by the people
-who made the molecule, and what the assay says can change the model in the same
-week. That is the thing being built here, and the October decisions are what made
-it something the University recognises rather than something a few people did after
-hours.
+The October decisions gave that arrangement standing. What the University
+recognised is not a proposal but a way of working with results already behind it.
