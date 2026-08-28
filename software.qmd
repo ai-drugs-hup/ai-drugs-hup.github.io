@@ -3,24 +3,7 @@ title: "Software & methods"
 ---
 
 ::: {.lede}
-What the lab has released publicly, and the tools it works with day to day.
-Everything in the first list is open source and installable without asking us
-for anything.
-:::
-
-[Public releases]{.eyebrow}
-
-## Software
-
-::: {.repo-list}
-::: {.repo}
-### [ml-guide-hdac](https://github.com/ai-drugs-hup/ml-guide-hdac)
-[MIT licence]{.repo-tag}
-
-A practical guide to building machine-learning models for histone deacetylase
-inhibitor prediction, written for people in the lab and left public because it is
-useful outside it too.
-:::
+The tools the lab works with day to day, and what each of them is for.
 :::
 
 [What we use]{.eyebrow}
