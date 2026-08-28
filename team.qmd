@@ -63,7 +63,7 @@ groupings are where people spend most of their time, not walls between them.
 
 [Synthetic chemistry]{.eyebrow}
 
-## Making and measuring {#synthesis-team-heading}
+## Synthesising and testing {#synthesis-team-heading}
 
 :::: {#synthesis-team}
 

@@ -46,7 +46,7 @@ trustworthy — charges, conformer energies and reaction-relevant geometries.
 :::
 
 ::: {.skill}
-[Making and measuring]{.skill-head}
+[Synthesis and assay]{.skill-head}
 
 Synthesis of hydroxamic acid and oxoindoline-based scaffolds, followed by enzyme
 inhibition and cytotoxicity assays. The published record is the evidence here:

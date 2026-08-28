@@ -69,7 +69,7 @@ designed molecule really holds where we think it does.
 :::
 
 ::: {.pillar}
-### Make and measure
+### Synthesise
 The designs that survive get made and tested in the laboratory. What comes back
 is data, and data is the only thing that makes the next round better.
 :::
