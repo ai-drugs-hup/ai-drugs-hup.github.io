@@ -1,0 +1,49 @@
+<%
+// Initials from the first and last word of the name. Vietnamese names put the
+// family name first and the given name last, so both ends are the informative
+// parts. Titles are stripped so "Dr. Mai Dung" gives MD, not DM.
+function initialsOf(name) {
+  const words = String(name)
+    .replace(/\b(Dr|Prof|MSc|PhD|BPharm)\.?\s*/gi, '')
+    .trim().split(/\s+/).filter(Boolean);
+  if (words.length === 0) return '?';
+  const first = words[0][0];
+  const last  = words.length > 1 ? words[words.length - 1][0] : '';
+  return (first + last).toUpperCase();
+}
+// Deterministic tint so a given person always gets the same colour, and a grid
+// with no photos in it looks varied on purpose rather than unfinished.
+function tintOf(name) {
+  let h = 0;
+  for (const ch of String(name)) h = (h * 31 + ch.codePointAt(0)) % 100000;
+  return h % 5;
+}
+const LINK_LABELS = { email: 'email', scholar: 'scholar', orcid: 'orcid', github: 'github' };
+const onlyPI = items.length === 1 && items[0].team === 'Principal investigator';
+%>
+<ul class="team-grid<%= onlyPI ? ' team-grid-pi' : '' %>">
+<% for (const item of items) { const isPI = item.team === 'Principal investigator'; %>
+<li class="team-card<%= isPI ? ' pi-card' : '' %>">
+<div class="avatar<%= item.photo ? '' : ' avatar-t' + tintOf(item.name) %>">
+<% if (item.photo) { %>
+<img src="assets/img/team/<%= item.photo %>" alt="<%= item.name %>" loading="lazy">
+<% } else { %>
+<span class="avatar-initials" aria-hidden="true"><%= item.initials || initialsOf(item.name) %></span>
+<% } %>
+</div>
+<div class="member-text">
+<p class="member-name"><%= item.name %></p>
+<% if (item.role) { %>
+<p class="member-role"><%= item.role %></p>
+<% } %>
+<% if (item.links) { %>
+<div class="member-links">
+<% for (const key of Object.keys(item.links)) { const val = item.links[key]; %>
+<a href="<%= key === 'email' ? 'mailto:' + val : val %>" rel="noopener"><%= LINK_LABELS[key] || key %></a>
+<% } %>
+</div>
+<% } %>
+</div>
+</li>
+<% } %>
+</ul>

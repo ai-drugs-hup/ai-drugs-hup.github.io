@@ -1,0 +1,53 @@
+---
+title: "Research"
+---
+
+::: {.lede}
+We want to shorten the distance between an idea for a molecule and the evidence
+that it works. That means building the models that propose and judge molecules,
+the simulations that test them, and keeping the chemistry close enough that an
+answer takes weeks rather than years.
+:::
+
+[Generative design]{.eyebrow}
+
+## Molecules that did not exist yesterday
+
+Screening a catalogue can only find what someone already made. We train
+generative models that design molecules directly in three dimensions, so that the
+shape and the chemistry are proposed together rather than one being fitted to the
+other afterwards. A proposal only counts if a chemist could actually make it.
+
+[Prediction]{.eyebrow}
+
+## Deciding what is worth the effort
+
+Models that estimate what a molecule will do before anyone spends a month on it:
+how strongly it acts, how it behaves in the body, and where it is likely to be
+toxic. We care as much about being able to interrogate a model's reasoning as
+about its accuracy — a ranking nobody can question is hard to act on.
+
+[Simulation]{.eyebrow}
+
+## Testing the answer with physics
+
+Statistical models are confident in ways that are not always earned. Simulation
+puts a proposed molecule in its real environment and asks whether it stays where
+it is supposed to. It is slower and much harder to fool, which is exactly why it
+sits between prediction and synthesis.
+
+[Chemistry]{.eyebrow}
+
+## Making it, and finding out
+
+The point of all of the above is a real compound in a real assay. The lab designs,
+makes and tests molecules, and the results return to the models as training data.
+This loop is the reason the lab is built the way it is.
+
+[Beyond one target]{.eyebrow}
+
+## Where we point it
+
+Cancer is where the lab's experience and data are deepest, so it is where the
+method is proved. Nothing about the approach is specific to it, and newer projects
+are already pointed elsewhere.

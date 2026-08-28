@@ -1,0 +1,71 @@
+---
+title: "Team"
+listing:
+  - id: pi
+    contents: members.yml
+    include:
+      team: "Principal investigator"
+    template: assets/team-card.ejs
+  - id: ai-team
+    contents: members.yml
+    include:
+      team: "AI team"
+    template: assets/team-card.ejs
+    sort: "name asc"
+  - id: md-team
+    contents: members.yml
+    include:
+      team: "MD team"
+    template: assets/team-card.ejs
+    sort: "name asc"
+  - id: synthesis-team
+    contents: members.yml
+    include:
+      team: "Synthesis team"
+    template: assets/team-card.ejs
+    sort: "name asc"
+  - id: alumni
+    contents: members.yml
+    include:
+      team: "Alumni"
+    template: assets/team-alumni.ejs
+    sort: "name asc"
+---
+
+The lab is small and mostly made up of students, which is deliberate: the work
+that gets done here is theirs, not a professor's with names attached. Everyone
+approaches the same problem from a different side — designing molecules, testing
+them against physics, and making the ones worth making. The three groupings below
+are where people spend most of their time, not walls between them.
+
+:::: {#pi}
+
+::::
+
+[Machine learning]{.eyebrow}
+
+## Designing and predicting {#ai-team-heading}
+
+:::: {#ai-team}
+
+::::
+
+[Molecular dynamics]{.eyebrow}
+
+## Simulating and validating {#md-team-heading}
+
+:::: {#md-team}
+
+::::
+
+[Synthetic chemistry]{.eyebrow}
+
+## Making and measuring {#synthesis-team-heading}
+
+:::: {#synthesis-team}
+
+::::
+
+:::: {#alumni}
+
+::::

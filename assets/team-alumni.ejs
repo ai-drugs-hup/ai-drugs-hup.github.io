@@ -1,0 +1,36 @@
+<%
+function initialsOf(name) {
+  const words = String(name).replace(/\b(Dr|Prof|MSc|PhD|BPharm)\.?\s*/gi, '')
+    .trim().split(/\s+/).filter(Boolean);
+  if (!words.length) return '?';
+  return ((words[0][0] || '') + (words.length > 1 ? words[words.length - 1][0] : '')).toUpperCase();
+}
+function tintOf(name) {
+  let h = 0;
+  for (const ch of String(name)) h = (h * 31 + ch.codePointAt(0)) % 100000;
+  return h % 5;
+}
+%>
+<% if (items.length) { %>
+<p class="eyebrow">Former members</p>
+<h2 id="alumni-heading">Alumni</h2>
+<ul class="team-grid team-grid-alumni">
+<% for (const item of items) { %>
+<li class="team-card team-card-alumni">
+<div class="avatar<%= item.photo ? '' : ' avatar-t' + tintOf(item.name) %>">
+<% if (item.photo) { %>
+<img src="assets/img/team/<%= item.photo %>" alt="<%= item.name %>" loading="lazy">
+<% } else { %>
+<span class="avatar-initials" aria-hidden="true"><%= item.initials || initialsOf(item.name) %></span>
+<% } %>
+</div>
+<div class="member-text">
+<p class="member-name"><%= item.name %></p>
+<% if (item.role) { %>
+<p class="member-role"><%= item.role %></p>
+<% } %>
+</div>
+</li>
+<% } %>
+</ul>
+<% } %>

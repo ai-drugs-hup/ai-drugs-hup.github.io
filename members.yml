@@ -1,0 +1,112 @@
+# The roster for the PUBLIC website.
+#
+# This file is the site's own source of truth. It was seeded once by hand from the lab roster and
+# is NOT synced with anything — the private roster must never be copied here again.
+#
+# Fields:
+#   name   required. As the person wants it written, with diacritics.
+#   role   required. Job title, not team name.
+#   team   "Principal investigator" | "AI team" | "MD team" | "Synthesis team"
+#          | "Alumni"
+#   photo  optional. Filename in assets/img/team/. Omit it and the card shows an initials circle.
+#   initials optional. Overrides the computed initials, which take the first and
+#          last word of the name — wrong when a Western given name is appended.
+#   links  optional. email / scholar / orcid / github
+#
+# ⚠️ Roles below describe what someone works on, not a formal job title. Dr. Dung
+#    confirmed the lab is mostly students, so members carry "Student researcher".
+#    If anyone here is staff rather than a student, correct that line — the word
+#    was applied to everyone except the PI.
+
+- name: Đỗ Thị Mai Dung
+  role: Head of Unit · Lecturer, Faculty of Pharmaceutical Chemistry and Technology
+  team: Principal investigator
+  links:
+    orcid: https://orcid.org/0000-0003-3326-2464
+
+- name: Nguyễn Thành Công
+  role: Student researcher — machine learning
+  team: AI team
+  links:
+    orcid: https://orcid.org/0000-0002-6247-8128
+
+- name: Hà Linh
+  role: Student researcher — machine learning
+  team: AI team
+
+- name: Đào Minh Tùng
+  role: Student researcher — machine learning
+  team: AI team
+
+- name: Dương Hoàng Khánh Uyên
+  role: Student researcher — machine learning
+  team: AI team
+
+# ── Synthesis team ───────────────────────────────────────────────────────────
+# Named by Dr. Dung. Capitalisation was normalised from the message as typed
+# ("Phạm ĐỨc dƯƠNG" etc.); all diacritics are preserved unchanged.
+#
+# ⚠️ Roles are PLACEHOLDERS. None of these three appears in the lab's publication
+#    list, so there was no evidence to derive a role from — they say what the
+#    team does, not what each person's title is.
+#
+# NOTE: an earlier guess put Dương Tiến Anh here, inferred from "Duong" plus the
+# publication record. That was wrong: Phạm Đức Dương has Dương as his GIVEN name,
+# which is how he would be referred to. Dương Tiến Anh is a frequent synthesis
+# co-author but was never named as a member, so he has been removed.
+
+- name: Phạm Đức Dương
+  role: Student researcher — synthetic chemistry
+  team: Synthesis team
+
+- name: Khuất Duy Bảo Khánh
+  role: Student researcher — synthetic chemistry
+  team: Synthesis team
+
+- name: Nguyễn Phương
+  role: Student researcher — synthetic chemistry
+  team: Synthesis team
+
+# ── Alumni ───────────────────────────────────────────────────────────────────
+# Former members. `role` is optional here: the card omits the line rather than
+# carrying a guess. Both of these were confirmed as alumni by Dr. Dung.
+#
+# Note Nguyễn Thảo My remains a co-author on the 2026 ACS Omega paper and the
+# 2025 HDAC6 paper, so she appears on the publications page as an author while
+# being listed here as a former member. That is consistent, not a contradiction.
+
+- name: Nguyễn Thảo My Kristýna
+  role: Student researcher — machine learning
+  team: Alumni
+  # Otherwise computed as NK, from "Nguyễn" and "Kristýna".
+  initials: NM
+
+# ⚠️ Diacritics added by inference from "Nguyen Anh Thu" — confirm the spelling.
+#    No role recorded: she does not appear in the lab's publication list, so
+#    nothing was assumed.
+- name: Nguyễn Anh Thư
+  team: Alumni
+
+- name: Trần Thị Thùy Mai
+  role: Student researcher — molecular dynamics
+  team: MD team
+
+- name: Nguyễn Đỗ Gia Hân
+  role: Student researcher — molecular dynamics
+  team: MD team
+
+- name: Nguyễn Ngọc Hà
+  role: Student researcher — molecular dynamics
+  team: MD team
+
+- name: Trần Tùng Lâm
+  role: Student researcher — molecular dynamics
+  team: MD team
+
+- name: Khánh Linh
+  role: Student researcher — molecular dynamics
+  team: MD team
+
+- name: Huỳnh Minh Huy
+  role: Student researcher — molecular dynamics
+  team: MD team

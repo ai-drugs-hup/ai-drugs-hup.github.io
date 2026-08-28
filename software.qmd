@@ -1,0 +1,86 @@
+---
+title: "Software & methods"
+---
+
+::: {.lede}
+What the lab has released publicly, and the tools it works with day to day.
+Everything in the first list is open source and installable without asking us
+for anything.
+:::
+
+[Public releases]{.eyebrow}
+
+## Software
+
+::: {.callout-note title="One release so far"}
+Most of the lab's code is not public yet. Rather than list private repositories
+that nobody can open, this page shows only what is genuinely available, and grows
+as more is released.
+:::
+
+::: {.repo-list}
+::: {.repo}
+### [ml-guide-hdac](https://github.com/ai-drugs-hup/ml-guide-hdac)
+[MIT licence]{.repo-tag}
+
+A practical guide to building machine-learning models for histone deacetylase
+inhibitor prediction, written for people in the lab and left public because it is
+useful outside it too.
+:::
+:::
+
+[What we use]{.eyebrow}
+
+## Methods and tools
+
+The lab is deliberately not tied to one framework. What follows is what actually
+appears in the lab's work, grouped by the question it answers.
+
+::: {.skill-grid}
+::: {.skill}
+[Predicting]{.skill-head}
+
+Molecular property and activity models in **PyTorch**, **scikit-learn**,
+**XGBoost** and **LightGBM**; molecular representations from **RDKit** and the
+**Uni-Mol** pretrained models; **SHAP** to interpret what a trained model is
+actually keying on.
+:::
+
+::: {.skill}
+[Docking and screening]{.skill-head}
+
+**AutoDock Vina** for pose prediction and virtual screening, with **Open Babel**
+for format and protonation handling, and **AlphaFold** where an experimental
+structure is not available.
+:::
+
+::: {.skill}
+[Simulating]{.skill-head}
+
+Molecular dynamics in **GROMACS** and **AMBER**, with **ACPYPE** for ligand
+parameterisation and **OpenMM** where a Python-native engine is easier to script.
+:::
+
+::: {.skill}
+[Quantum chemistry]{.skill-head}
+
+**ORCA**, **Gaussian 16** and **xTB** for the cases where a force field is not
+trustworthy — charges, conformer energies and reaction-relevant geometries.
+:::
+
+::: {.skill}
+[Making and measuring]{.skill-head}
+
+Synthesis of hydroxamic acid and oxoindoline-based scaffolds, followed by enzyme
+inhibition and cytotoxicity assays. The published record is the evidence here:
+twenty of the lab's papers report compounds synthesised, and twenty-three report
+biological evaluation.
+:::
+
+::: {.skill}
+[Looking at structures]{.skill-head}
+
+**PyMOL** for inspection and figures, because a trajectory that has not been
+looked at is a number nobody should trust yet.
+:::
+:::

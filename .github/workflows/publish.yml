@@ -1,0 +1,70 @@
+# Builds the Quarto site and publishes it to GitHub Pages.
+#
+# _site/ is deliberately not committed, so this workflow is the only thing that
+# produces the published site. It needs no secrets: publications.yml and
+# references.bib are generated locally by scripts/update-bib.py and committed, so
+# the build never contacts the citation resolver.
+name: Publish site
+
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Never let two deployments race each other.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          version: 1.10.18
+
+      - name: Render
+        run: quarto render
+
+      # A build that quietly dropped the roster or the publications is worse than
+      # a failed build, so assert the pages are populated before publishing.
+      - name: Check the build is not hollow
+        run: |
+          set -euo pipefail
+          test -f _site/index.html
+          test -f _site/CNAME
+          members=$(grep -c 'class="member-name"' _site/team.html)
+          papers=$(grep -c 'pub-row\|pub-card' _site/publications.html)
+          echo "members=$members papers=$papers"
+          test "$members" -ge 15
+          test "$papers" -ge 30
+          # Working notes must never reach the published site. Quarto's default
+          # is to render every markdown file in the project, so this checks the
+          # render whitelist in _quarto.yml is still doing its job.
+          ! find _site -name '*.html' -path '*agents*' | grep -q .
+          # No private-network addresses in the output.
+          ! grep -rqE '\b(10|127)\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\b|\b192\.168\.[0-9]{1,3}\.[0-9]{1,3}\b|\b100\.(6[4-9]|[7-9][0-9]|1[0-2][0-9])\.[0-9]{1,3}\.[0-9]{1,3}\b' _site --include='*.html' --include='*.json'
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

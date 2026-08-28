@@ -1,0 +1,53 @@
+<%
+const ROLE_LABEL = { first: 'First author', corresponding: 'Corresponding author' };
+const byImpact = (a, b) => (b.year || 0) - (a.year || 0) || (b.citations || 0) - (a.citations || 0);
+
+// The template does its own ordering so the page does not depend on how the
+// listing chose to sort. Lead-author work first, most recent first within that.
+const all = items.slice().sort(byImpact);
+const featured = all.filter(i => i.featured);
+const rest = all.filter(i => !i.featured);
+
+function authorList(item) {
+  return (item.authors || []).map(a =>
+    a === item.her_name ? '**' + a + '**' : a).join(', ');
+}
+function doiHref(doi) { return 'https://doi.org/' + doi; }
+%>
+<% if (featured.length) { %>
+<h2 id="selected">Selected publications</h2>
+<ul class="pub-featured">
+<% for (const item of featured) { %>
+<li class="pub-card">
+<div class="pub-meta">
+<span class="pub-role"><%= ROLE_LABEL[item.role] || 'Co-author' %></span>
+<span class="pub-year"><%= item.year %></span>
+</div>
+<p class="pub-title"><a href="<%= doiHref(item.doi) %>" rel="noopener"><%= item.title %></a></p>
+<p class="pub-venue"><%= item.venue %></p>
+<p class="pub-authors"><%= authorList(item) %></p>
+<div class="pub-foot">
+<a class="pub-doi" href="<%= doiHref(item.doi) %>" rel="noopener"><%= item.doi %></a>
+<% if (item.citations > 0) { %>
+<span class="pub-cites"><%= item.citations %> citation<%= item.citations === 1 ? '' : 's' %></span>
+<% } %>
+</div>
+</li>
+<% } %>
+</ul>
+<% } %>
+<h2 id="all">All publications</h2>
+<p class="pub-note">Every entry resolved from its DOI. Names in bold mark Dr. Dung's authorship.</p>
+<ol class="pub-list">
+<% let lastYear = null; %>
+<% for (const item of rest.concat([])) { %>
+<% if (item.year !== lastYear) { lastYear = item.year; %>
+<li class="pub-year-break" role="presentation"><span><%= item.year %></span></li>
+<% } %>
+<li class="pub-row">
+<p class="pub-row-title"><a href="<%= doiHref(item.doi) %>" rel="noopener"><%= item.title %></a></p>
+<p class="pub-row-meta"><em><%= item.venue %></em><% if (ROLE_LABEL[item.role]) { %> · <span class="pub-role-inline"><%= ROLE_LABEL[item.role] %></span><% } %><% if (item.citations > 0) { %> · <%= item.citations %> citation<%= item.citations === 1 ? '' : 's' %><% } %></p>
+<p class="pub-row-authors"><%= authorList(item) %></p>
+</li>
+<% } %>
+</ol>

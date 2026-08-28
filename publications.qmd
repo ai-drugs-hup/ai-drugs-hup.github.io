@@ -1,0 +1,23 @@
+---
+title: "Publications"
+listing:
+  - id: pubs
+    contents: publications.yml
+    template: assets/publication-list.ejs
+    sort: false
+---
+
+::: {.lede}
+Thirty-seven peer-reviewed papers, twelve of them with Dr. Dung as first or
+corresponding author. The lab works mainly on histone deacetylase inhibitors and,
+more recently, on machine-learning models that predict which candidates are worth
+synthesising.
+:::
+
+Every entry below was resolved from its DOI through a citation resolver and
+confirmed as published. Nothing on this page is typed by hand, and citation
+counts are recorded at build time.
+
+:::: {#pubs}
+
+::::

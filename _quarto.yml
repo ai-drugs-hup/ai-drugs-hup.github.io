@@ -1,0 +1,56 @@
+project:
+  type: website
+  output-dir: _site
+  # A WHITELIST, deliberately. Quarto's default is to render every markdown file
+  # in the project, which silently published agents/plans/ and agents/notes/ —
+  # internal briefings — into _site and into search.json. Never widen this to a
+  # glob; add pages one by one.
+  render:
+    - index.qmd
+    - research.qmd
+    - team.qmd
+    - publications.qmd
+    - software.qmd
+  resources:
+    - favicon.ico
+    - assets/structure/
+    # GitHub Pages reads this from the site root to serve the custom domain.
+    - CNAME
+
+website:
+  title: "AI & Drug Design"
+  site-url: "https://ai-drugs.io.vn"
+  description: "Unit of Computation and AI Application Research, Faculty of Pharmaceutical Chemistry and Technology, Hanoi University of Pharmacy."
+  navbar:
+    logo: assets/img/mark.svg
+    left:
+      - href: index.qmd
+        text: Home
+      - href: research.qmd
+        text: Research
+      - href: team.qmd
+        text: Team
+      - href: publications.qmd
+        text: Publications
+      - href: software.qmd
+        text: Software
+  page-footer:
+    center: |
+      Unit of Computation and AI Application Research · Faculty of Pharmaceutical
+      Chemistry and Technology · Hanoi University of Pharmacy · Hà Nội, Việt Nam
+  favicon: favicon.ico
+
+format:
+  html:
+    theme: assets/styles.scss
+    # Full width on every page, not just the home page: the content column is
+    # meant to run to the page margins rather than sit in a narrow measure.
+    page-layout: full
+    toc: false
+    anchor-sections: false
+    include-in-header:
+      - text: |
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&family=Atkinson+Hyperlegible:wght@400;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+          <link rel="icon" type="image/svg+xml" href="/assets/img/mark.svg">

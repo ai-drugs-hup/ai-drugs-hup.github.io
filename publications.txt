@@ -1,0 +1,55 @@
+# The publication list for the website, one DOI per line.
+#
+# Sourced from Dr. Dung's official publication table (37 papers: 31
+# international, 6 domestic). Every DOI here was resolved through the lab's
+# citation resolver and confirmed published, and her authorship was checked
+# on each one. Nothing on the site is typed by hand.
+#
+# role=   first | corresponding | co-author   -- drives the ordering
+# scope=  international | domestic            -- taken from the table's own
+#         two sections; only international lead-author work is featured.
+#
+# Run scripts/update-bib.py after editing.
+#
+# FIRST OR CORRESPONDING AUTHOR (12)
+
+10.1021/acsomega.5c10459  role=corresponding scope=international   # 2026 ACS Omega
+10.1038/s41598-025-32282-6  role=corresponding scope=international   # 2025 Scientific Reports
+10.59882/1859-364X/311  role=corresponding scope=domestic   # 2025 Tạp chí Nghiên cứu Dược và Thông tin Thu
+10.1039/D4NJ03452J  role=corresponding scope=international   # 2024 New Journal of Chemistry
+10.59882/1859-364X/188  role=corresponding scope=domestic   # 2024 Tạp chí Nghiên cứu Dược và Thông tin Thu
+10.1002/ardp.202100216  role=first scope=international   # 2022 Archiv der Pharmazie
+10.1038/s41598-022-06887-0  role=first scope=international   # 2022 Scientific Reports
+10.2174/1871520622666220118154914  role=first scope=international   # 2022 Anti-Cancer Agents in Medicinal Chemistr
+10.1007/s12039-018-1472-x  role=first scope=international   # 2018 Journal of Chemical Sciences
+10.2174/1573406414666180528111749  role=first scope=international   # 2018 Medicinal Chemistry
+10.1016/j.arabjc.2015.10.007  role=first scope=international   # 2017 Arabian Journal of Chemistry
+10.2174/1573406411666150702130633  role=first scope=international   # 2015 Medicinal Chemistry
+
+# CO-AUTHOR (25)
+
+10.1016/j.bmcl.2025.130509  role=co-author scope=international   # 2026 Bioorganic & Medicinal Chemistry Letters
+10.1021/acsomega.5c06704  role=co-author scope=international   # 2026 ACS Omega
+10.1016/j.bmc.2025.118143  role=co-author scope=international   # 2025 Bioorganic & Medicinal Chemistry
+10.1039/d5cp00817d  role=co-author scope=international   # 2025 Physical Chemistry Chemical Physics
+10.34238/tnu-jst.11797  role=co-author scope=domestic   # 2025 TNU Journal of Science and Technology
+10.1021/acs.jpcb.4c06224  role=co-author scope=international   # 2024 The Journal of Physical Chemistry B
+10.1002/slct.202400404  role=co-author scope=international   # 2024 ChemistrySelect
+10.59882/1859-364X/200  role=co-author scope=domestic   # 2024 Tạp chí Nghiên cứu Dược và Thông tin Thu
+10.59882/1859-364X/107  role=co-author scope=domestic   # 2024 Tạp chí Nghiên cứu Dược và Thông tin Thu
+10.59882/1859-364X/220  role=co-author scope=domestic   # 2024 Tạp chí Nghiên cứu Dược và Thông tin Thu
+10.3390/molecules28083588  role=co-author scope=international   # 2023 Molecules
+10.1039/d2nj04894a  role=co-author scope=international   # 2023 New Journal of Chemistry
+10.1002/cbdv.202201030  role=co-author scope=international   # 2023 Chemistry & Biodiversity
+10.1021/acsomega.0c05870  role=co-author scope=international   # 2021 ACS Omega
+10.1016/j.bioorg.2020.103988  role=co-author scope=international   # 2020 Bioorganic Chemistry
+10.1007/s00044-019-02488-1  role=co-author scope=international   # 2020 Medicinal Chemistry Research
+10.1016/j.bmcl.2020.127537  role=co-author scope=international   # 2020 Bioorganic & Medicinal Chemistry Letters
+10.1002/cbdv.202000290  role=co-author scope=international   # 2020 Chemistry & Biodiversity
+10.1080/14756366.2020.1816997  role=co-author scope=international   # 2020 Journal of Enzyme Inhibition and Medicin
+10.1016/j.bioorg.2017.02.002  role=co-author scope=international   # 2017 Bioorganic Chemistry
+10.1016/j.tetlet.2015.09.147  role=co-author scope=international   # 2015 Tetrahedron Letters
+10.2174/1573406410666140925153128  role=co-author scope=international   # 2015 Medicinal Chemistry
+10.1007/s00044-015-1422-9  role=co-author scope=international   # 2015 Medicinal Chemistry Research
+10.3109/14756366.2013.832238  role=co-author scope=international   # 2014 Journal of Enzyme Inhibition and Medicin
+10.1016/j.ejmech.2013.10.045  role=co-author scope=international   # 2013 European Journal of Medicinal Chemistry
