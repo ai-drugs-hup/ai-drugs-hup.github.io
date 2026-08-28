@@ -12,6 +12,8 @@
 #   initials optional. Overrides the computed initials, which take the first and
 #          last word of the name — wrong when a Western given name is appended.
 #   links  optional. email / scholar / orcid / github
+#   until  optional, Alumni only. The year the person left the lab. Omit it rather
+#          than guess — the card drops the line when it is absent.
 #
 # ⚠️ Roles below describe what someone works on. Dr. Dung confirmed the lab is
 #    mostly students, so members default to "Student researcher".
@@ -83,11 +85,12 @@
   initials: NM
 
 # ⚠️ Diacritics added by inference from "Nguyen Anh Thu" — confirm the spelling.
-#    Her area (machine learning) was confirmed by Cong; she does not appear in the
-#    lab's publication list, so the area is what is known and nothing more.
+#    Her area (machine learning) and her leaving year (2024) were confirmed by Cong;
+#    she does not appear in the lab's publication list, so that is all that is known.
 - name: Nguyễn Anh Thư
   role: Student researcher — machine learning
   team: Alumni
+  until: 2024
 
 - name: Trần Thị Thùy Mai
   role: Student researcher — molecular dynamics

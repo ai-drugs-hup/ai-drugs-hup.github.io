@@ -29,6 +29,9 @@ function tintOf(name) {
 <% if (item.role) { %>
 <p class="member-role"><%= item.role %></p>
 <% } %>
+<% if (item.until) { %>
+<p class="member-until">Until <%= item.until %></p>
+<% } %>
 </div>
 </li>
 <% } %>

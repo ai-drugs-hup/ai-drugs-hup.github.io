@@ -186,6 +186,18 @@ a:focus-visible, button:focus-visible, .team-card:focus-visible {
   max-width: none;
 }
 
+// Alumni only, and quieter than the role: when someone left is a footnote, not a
+// title. Absent for anyone whose leaving year is not recorded.
+.member-until {
+  font-family: $mono-font;
+  font-size: 0.66rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: $ink-soft;
+  margin: 0.3rem 0 0;
+  max-width: none;
+}
+
 .member-links {
   margin-top: 0.85rem;
   display: flex;
