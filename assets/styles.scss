@@ -903,17 +903,35 @@ html { scroll-behavior: smooth; }
   gap: 0.75rem;
   align-items: center;
   margin-top: 1.9rem;
+
+  // `.hero-copy` carries `.hero` too, and the `.hero` block sets
+  // `.btn-coral { margin-top: 1.75rem }` — written when the button stood alone
+  // under the lede. In a flex row that margin lands on ONE item, and
+  // `align-items: center` centres the MARGIN box rather than the border box, so
+  // the coral button sat 17.7px below its neighbour. Measured, not guessed.
+  .btn-coral { margin-top: 0; }
+}
+
+// The two hero buttons are one shape in two finishes, so every metric that
+// decides the box has to match — not just the padding. They were 2px different
+// in height because only the quiet one has a border, and set in two different
+// typefaces because `.btn-coral` names the display font and `.btn-quiet` did
+// not. A transparent border on the coral one keeps the box models identical
+// however the browser rounds 1.5px.
+.btn-coral {
+  border: 1.5px solid transparent;
 }
 
 // The second action. Quiet on purpose: two filled coral buttons side by side
 // would make neither of them the answer to "what do I click".
 .btn-quiet {
   display: inline-block;
-  padding: 0.62rem 1.3rem;
+  padding: 0.62rem 1.5rem;
   border: 1.5px solid $line;
   border-radius: 999px;
   background: transparent;
   color: $ink;
+  font-family: $display-font;
   font-weight: 700;
   text-decoration: none;
   transition: border-color 160ms ease, color 160ms ease, background-color 160ms ease;
