@@ -122,10 +122,12 @@
 # ⚠️ Cong wrote "University of Hiroshima". No institution uses that English name;
 #    the one he almost certainly means is Hiroshima University (広島大学), which
 #    has the pharmaceutical sciences graduate school. Confirm before this is
-#    quoted anywhere that matters. Neither his leaving year nor his area was
-#    given, so both lines are absent rather than guessed.
+#    quoted anywhere that matters. His leaving year was not given and is absent
+#    rather than guessed. Cong wrote his area as "Wet Lab"; it is lower-cased here
+#    to match the other roles, which all read "Student researcher — <area>".
 - name: Thái Chính Tâm
   photo: thai-chinh-tam.jpg
+  role: Student researcher — wet lab
   team: Alumni
   now: Hiroshima University, Japan
 
