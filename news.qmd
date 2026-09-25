@@ -8,7 +8,7 @@ listing:
 ---
 
 ::: {.lede}
-What the unit has been recognised for, and what it has been doing since.
+Milestones, announcements and moments from our lab.
 :::
 
 :::: {#news}

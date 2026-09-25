@@ -3,61 +3,57 @@ title: "Software & methods"
 ---
 
 ::: {.lede}
-The tools the lab works with day to day, and what each of them is for.
+The tools behind our discoveries, from AI models to molecular simulation and
+the chemistry bench.
 :::
 
-[What we use]{.eyebrow}
+[Our toolkit]{.eyebrow}
 
-## Methods and tools
+## Built across disciplines
 
-The lab is deliberately not tied to one framework. What follows is what actually
-appears in the lab's work, grouped by the question it answers.
+Different questions need different tools. These are the methods we bring together
+to move an idea from a data point toward an experiment.
 
 ::: {.skill-grid}
 ::: {.skill}
-[Predicting]{.skill-head}
+[Design with AI]{.skill-head}
 
-Molecular property and activity models in **PyTorch**, **scikit-learn**,
-**XGBoost** and **LightGBM**; molecular representations from **RDKit** and the
-**Uni-Mol** pretrained models; **SHAP** to interpret what a trained model is
-actually keying on.
+**PyTorch**, **scikit-learn**, **XGBoost**, **LightGBM**, **RDKit** and **Uni-Mol**
+help us model molecular activity and properties. **SHAP** helps explain the
+predictions.
 :::
 
 ::: {.skill}
-[Docking and screening]{.skill-head}
+[Explore targets]{.skill-head}
 
-**AutoDock Vina** for pose prediction and virtual screening, with **Open Babel**
-for format and protonation handling, and **AlphaFold** where an experimental
-structure is not available.
+**AutoDock Vina**, **Open Babel** and **AlphaFold** support structure-based
+screening and target exploration.
 :::
 
 ::: {.skill}
-[Simulating]{.skill-head}
+[Watch molecules move]{.skill-head}
 
-Molecular dynamics in **GROMACS** and **AMBER**, with **ACPYPE** for ligand
-parameterisation and **OpenMM** where a Python-native engine is easier to script.
+**GROMACS**, **AMBER**, **OpenMM** and **ACPYPE** help us simulate how molecules
+behave over time.
 :::
 
 ::: {.skill}
-[Quantum chemistry]{.skill-head}
+[Examine the details]{.skill-head}
 
-**ORCA**, **Gaussian 16** and **xTB** for the cases where a force field is not
-trustworthy — charges, conformer energies and reaction-relevant geometries.
+**ORCA**, **Gaussian 16** and **xTB** let us study electronic structure and
+energetics when a closer look is needed.
 :::
 
 ::: {.skill}
-[Synthesis and assay]{.skill-head}
+[Make and test]{.skill-head}
 
-Synthesis of hydroxamic acid and oxoindoline-based scaffolds, followed by enzyme
-inhibition and cytotoxicity assays. The published record is the evidence here:
-twenty of the lab's papers report compounds synthesised, and twenty-three report
-biological evaluation.
+We synthesise new compounds and measure their activity in enzyme inhibition and
+cell-based assays.
 :::
 
 ::: {.skill}
-[Looking at structures]{.skill-head}
+[See the structure]{.skill-head}
 
-**PyMOL** for inspection and figures, because a trajectory that has not been
-looked at is a number nobody should trust yet.
+**PyMOL** helps us inspect molecular structures and share what we see.
 :::
 :::

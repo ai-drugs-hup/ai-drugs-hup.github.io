@@ -32,14 +32,9 @@ listing:
     sort: "name asc"
 ---
 
-To the best of our knowledge, we are the only lab in Vietnam comprehensive enough
-to run the whole chain in-house: generative AI that designs molecules, molecular
-dynamics that tests which ones hold up under the physics, and synthetic chemistry
-that actually makes them. That is what lets a result from the bench change a model
-the same week, instead of the next grant cycle.
-
-Almost everyone below is a student, and that is the point: the work is theirs. The
-groupings are where people spend most of their time, not walls between them.
+Meet the people turning molecular ideas into experiments. Our team works across
+machine learning, molecular dynamics and synthetic chemistry, bringing different
+skills to every stage of discovery.
 
 :::: {#pi}
 

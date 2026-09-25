@@ -7,7 +7,8 @@ listing:
 ---
 
 ::: {.lede}
-The people behind the work. Click any photograph to see it larger.
+A glimpse of the people and places behind our research. Click a photograph to
+see it larger.
 :::
 
 :::: {#gallery}

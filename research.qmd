@@ -3,51 +3,66 @@ title: "Research"
 ---
 
 ::: {.lede}
-We want to shorten the distance between an idea for a molecule and the evidence
-that it works. That means building the models that propose and judge molecules,
-the simulations that test them, and keeping the chemistry close enough that an
-answer takes weeks rather than years.
+Discover the whole journey of a molecule: imagined by AI, explored through
+simulation, then made and tested in the lab.
 :::
 
-[Generative design]{.eyebrow}
+```{=html}
+<section class="research-vision" aria-labelledby="research-vision-heading">
+  <div>
+    <p class="eyebrow">Our ambition</p>
+    <h2 id="research-vision-heading">A new model for drug design in Vietnam</h2>
+    <p>Machine learning, molecular dynamics and synthetic chemistry work together
+    here. Each discipline moves the next one forward.</p>
+    <a class="btn-coral" href="team.html">Meet the team</a>
+  </div>
+  <img src="assets/img/hero-hdac2-4lxz.png"
+       alt="Molecular structure of HDAC2 with a bound inhibitor."
+       width="968" height="840" decoding="async">
+</section>
+```
 
-## Molecules that did not exist yesterday
+[Explore the pipeline]{.eyebrow}
 
-Screening a catalogue can only find what someone already made. We train
-generative models that design molecules directly in three dimensions, so that the
-shape and the chemistry are proposed together rather than one being fitted to the
-other afterwards. A proposal only counts if a chemist could actually make it.
+## How discovery moves
 
-[Prediction]{.eyebrow}
+```{=html}
+<div class="research-grid">
+  <article class="research-card">
+    <span class="research-step">01 / Design</span>
+    <h3>Imagine the molecule</h3>
+    <p>Generative models propose new three-dimensional candidates, guided by
+    target shape and chemical feasibility.</p>
+  </article>
+  <article class="research-card">
+    <span class="research-step">02 / Predict</span>
+    <h3>Find the standouts</h3>
+    <p>Machine learning prioritises candidates by predicted activity, properties
+    and safety signals.</p>
+  </article>
+  <article class="research-card">
+    <span class="research-step">03 / Simulate</span>
+    <h3>See how it behaves</h3>
+    <p>Molecular dynamics follows molecules as they move and interact with their
+    protein targets over time.</p>
+  </article>
+  <article class="research-card">
+    <span class="research-step">04 / Make &amp; test</span>
+    <h3>Make it measurable</h3>
+    <p>Synthetic chemistry and biological assays turn promising designs into
+    compounds and experimental results.</p>
+  </article>
+</div>
+```
 
-## Deciding what is worth the effort
+::: {.research-outlook}
+[Where we focus]{.eyebrow}
 
-Models that estimate what a molecule will do before anyone spends a month on it:
-how strongly it acts, how it behaves in the body, and where it is likely to be
-toxic. We care as much about being able to interrogate a model's reasoning as
-about its accuracy — a ranking nobody can question is hard to act on.
+## New targets. New possibilities.
 
-[Simulation]{.eyebrow}
+Our published work has a strong focus on cancer-relevant targets, especially
+histone deacetylases. The same combination of AI, simulation and chemistry can
+be applied to new therapeutic questions.
 
-## Testing the answer with physics
-
-Statistical models are confident in ways that are not always earned. Simulation
-puts a proposed molecule in its real environment and asks whether it stays where
-it is supposed to. It is slower and much harder to fool, which is exactly why it
-sits between prediction and synthesis.
-
-[Chemistry]{.eyebrow}
-
-## Making it, and finding out
-
-The point of all of the above is a real compound in a real assay. The lab designs,
-makes and tests molecules, and the results return to the models as training data.
-This loop is the reason the lab is built the way it is.
-
-[Beyond one target]{.eyebrow}
-
-## Where we point it
-
-Cancer is where the lab's experience and data are deepest, so it is where the
-method is proved. Nothing about the approach is specific to it, and newer projects
-are already pointed elsewhere.
+[Explore our publications](publications.html)
+:::

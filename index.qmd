@@ -17,17 +17,15 @@ include-after-body:
 ```{=html}
 <div class="hero-grid">
 <div class="hero hero-copy">
-<p class="eyebrow">Unit of Computation and AI Application Research</p>
+<p class="eyebrow">AI &amp; drug design · Hanoi University of Pharmacy</p>
 
-<h1>Prediction is not the finish line.</h1>
+<h1>From machine learning to the wet lab.</h1>
 
-<p class="lede">We are building a lab that goes from an idea to a real compound:
-generative models that design molecules in three dimensions, simulations that test
-whether the design holds, and the chemistry to make it and find out. The aim is
-treatments for diseases that still have none good enough.</p>
+<p class="lede">Our vision is to become Vietnam's leading drug design lab,
+uniting AI, molecular simulation and chemistry to create and test new molecules.</p>
 
 <p class="hero-actions">
-<a class="btn-coral" href="research.html">See the research</a>
+<a class="btn-coral" href="research.html">Explore our research</a>
 <a class="btn-quiet" href="team.html">Meet the team</a>
 </p>
 </div>
@@ -40,10 +38,8 @@ treatments for diseases that still have none good enough.</p>
     <button type="button" class="structure-load">Show the interactive structure</button>
   </div>
   <figcaption>
-    <strong>HDAC2 with vorinostat bound</strong>, from PDB entry
-    <a href="https://www.rcsb.org/structure/4LXZ" rel="noopener">4LXZ</a> at 1.85 Å — the
-    same complex the lab carries into its own molecular dynamics. The inhibitor is drawn in
-    red, the catalytic zinc in gold.
+    <strong>Explore a drug target in 3D.</strong> HDAC2 with vorinostat bound,
+    from <a href="https://www.rcsb.org/structure/4LXZ" rel="noopener">PDB 4LXZ</a>.
     <span class="structure-status" role="status" aria-live="polite"></span>
   </figcaption>
 </figure>
@@ -59,45 +55,40 @@ treatments for diseases that still have none good enough.</p>
 ```
 
 ::: {.mission}
-> A prediction nobody can test is an opinion. Ours are answerable — designed,
-> simulated, made and measured by the same people, in the same lab.
+> From code to chemistry, every idea has a path to the lab.
 :::
 
-[How the lab works]{.eyebrow}
+[Our approach]{.eyebrow}
 
-## One loop, not three departments {#the-loop}
+## One idea. Three disciplines. {#the-loop}
 
 ```{=html}
 <div class="loop reveal">
 <ol class="loop-stages">
 <li class="loop-stage">
 <h3>Design</h3>
-<p>We train generative models that propose molecules in three dimensions, and
-models that predict what those molecules will do — how active, how safe, how
-drug-like.</p>
+<p>Generative AI proposes new 3D molecules. Prediction models help us choose
+which candidates to explore.</p>
 </li>
 <li class="loop-stage">
 <h3>Simulate</h3>
-<p>Physics decides what statistics only suggested. Simulation tells us whether a
-designed molecule really holds where we think it does.</p>
+<p>Molecular dynamics shows how candidates move and interact with their
+targets over time.</p>
 </li>
 <li class="loop-stage">
-<h3>Synthesise</h3>
-<p>The designs that survive get made and tested in the laboratory. What comes back
-is data, and data is the only thing that makes the next round better.</p>
+<h3>Make &amp; test</h3>
+<p>Chemistry and assays turn promising designs into real compounds and
+experimental results.</p>
 </li>
 </ol>
 <div class="loop-return">
   <svg class="loop-return-path" aria-hidden="true" focusable="false"></svg>
-  <p class="loop-return-label">What the bench measures retrains the models</p>
+  <p class="loop-return-label">Every result shapes the next idea</p>
 </div>
 </div>
 ```
 
-Each of these is common on its own. Holding all three is what we are building, and
-it is the difference between a wrong idea costing us weeks instead of a
-collaboration, and a right one being confirmed without asking anybody's
-permission.
+[See how the science connects](research.html).
 
 ```{=html}
 <section class="reel full-bleed" aria-labelledby="reel-heading">
@@ -107,17 +98,35 @@ permission.
     <source src="assets/img/video/lab-reel.mp4" type="video/mp4">
   </video>
   <div class="reel-overlay">
-    <h2 id="reel-heading">Almost everyone here is a student</h2>
-    <p>That is deliberate. The models, the simulations and the compounds are
-    theirs, and so is the credit.</p>
-    <a class="btn-quiet btn-on-dark" href="gallery.html">See the gallery</a>
+    <h2 id="reel-heading">Meet the minds behind the molecules</h2>
+    <p>One team. Many disciplines. A shared drive to discover what comes next.</p>
+    <a class="btn-quiet btn-on-dark" href="team.html">Meet the team</a>
+  </div>
+</section>
+```
+
+[Inside the lab]{.eyebrow}
+
+## Where ideas take shape
+
+```{=html}
+<section class="workstation-showcase reveal" aria-label="Inside our computational lab">
+  <img src="assets/img/workstations.jpg"
+       alt="Desktop workstations used for molecular modelling in the lab."
+       width="1200" height="1251" loading="lazy" decoding="async">
+  <div class="workstation-copy">
+    <p class="eyebrow">Built to explore</p>
+    <h3>From data to discovery</h3>
+    <p>Our workstations support molecular design, simulation and data analysis —
+    the computational side of a lab that also makes and tests compounds.</p>
+    <a href="research.html">Discover our research →</a>
   </div>
 </section>
 ```
 
 [Where to go next]{.eyebrow}
 
-## Three ways in
+## Explore the lab
 
 ```{=html}
 <ul class="routes reveal">
@@ -125,46 +134,37 @@ permission.
 <a class="route-media" href="team.html" tabindex="-1" aria-hidden="true">
 <img src="assets/img/cards/team.jpg" alt="" loading="lazy" decoding="async" width="1200" height="750">
 </a>
-<h3><a href="team.html">The people</a></h3>
-<p>A principal investigator and the students who do the work, across machine
-learning, molecular dynamics and synthetic chemistry.</p>
+<h3><a href="team.html">Our people</a></h3>
+<p>Meet the team bringing AI, molecular simulation and chemistry together.</p>
 </li>
 <li class="route">
 <a class="route-media route-media-plate" href="publications.html" tabindex="-1" aria-hidden="true">
 <img src="assets/img/hero-hdac2-4lxz.png" alt="" loading="lazy" decoding="async" width="968" height="840">
 </a>
-<h3><a href="publications.html">The record</a></h3>
-<p>Thirty-seven peer-reviewed papers, twelve of them with Dr. Dung as first or
-corresponding author, every one resolved from its DOI.</p>
+<h3><a href="publications.html">Published work</a></h3>
+<p>Explore our research in drug design, medicinal chemistry and computation.</p>
 </li>
 <li class="route">
 <a class="route-media" href="news.html" tabindex="-1" aria-hidden="true">
 <img src="assets/img/cards/news.jpg" alt="" loading="lazy" decoding="async" width="1200" height="750">
 </a>
-<h3><a href="news.html">What is happening</a></h3>
-<p>University decisions, appointments, and the things the unit is doing that are
-not papers yet.</p>
+<h3><a href="news.html">Latest stories</a></h3>
+<p>News, milestones and moments from the lab.</p>
 </li>
 </ul>
 ```
 
-[What we are aiming at]{.eyebrow}
+[What drives us]{.eyebrow}
 
-## Diseases that still need better medicines
+## Built for the next therapeutic challenge
 
-Cancer is where the lab has the deepest experience and the most data, and it is
-where the work starts. The method is not specific to it. Anywhere there is a
-protein worth acting on, a way to measure success and a chemist willing to make
-the compound, the same loop applies.
+Our strongest track record is in cancer research, particularly histone deacetylase
+inhibitors. We bring the same blend of computation and chemistry to new targets
+and new questions.
 
-The chemistry runs deep here — compounds designed, made and tested for more than a
-decade within the Faculty of Pharmaceutical Chemistry and Technology. The
-computational arm brings prediction and simulation to the same bench, and is moving
-fast. Joining them completely is the work.
+[In focus]{.eyebrow}
 
-[Latest]{.eyebrow}
-
-## News
+## Lab news
 
 :::: {#home-news}
 
