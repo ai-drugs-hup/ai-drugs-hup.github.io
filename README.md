@@ -9,9 +9,22 @@ A static site built with [Quarto](https://quarto.org) and published to GitHub Pa
 ## Editing it
 
 **A person** is a few lines in `members.yml`. `team:` decides which section they appear in —
-`Principal investigator`, `AI team`, `MD team`, `Synthesis team` or `Alumni`. A photo is optional: put
-a web-sized image in `assets/img/team/` and name it in `photo:`, or omit it and the card falls back to
-a coloured initials circle. `role` and `initials` are optional too.
+`Principal investigator`, `AI team`, `MD team`, `Synthesis team` or `Alumni`. `role` and `initials`
+are optional, and so is a photo — without one the card falls back to a coloured initials circle, which
+is a normal card and not a broken one.
+
+A photo is a **480x480 square crop framed on the face**, in `assets/img/team/`, named in `photo:`.
+Do not drop a camera or phone original in there: everything under `assets/` is published as-is and
+stays in this repository's history forever. `scripts/crop-portrait.py` does the crop:
+
+```bash
+python3 scripts/crop-portrait.py <name> <fx> <fy> <side> [output-name]
+```
+
+`fx`/`fy` place the face centre as fractions of the whole image and `side` is the crop's edge length
+as a fraction of the image height, so `0.5 0.45 0.3` means "centred horizontally, slightly above the
+middle, and take 30% of the height". A path in place of `<name>` lifts one face out of a group
+photograph.
 
 **A paper** is a DOI, one per line in `publications.txt`, with a `role=` and `scope=` annotation that
 drive the ordering. Then:

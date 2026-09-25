@@ -198,6 +198,17 @@ a:focus-visible, button:focus-visible, .team-card:focus-visible {
   max-width: none;
 }
 
+// Where an alumnus went next. Deliberately NOT the mono-uppercase treatment of
+// .member-until above: an institution name set in capitals stops reading as a
+// name, and this is the line people actually want from an alumni card.
+.member-now {
+  font-size: 0.74rem;
+  line-height: 1.4;
+  color: $ink;
+  margin: 0.35rem 0 0;
+  max-width: none;
+}
+
 .member-links {
   margin-top: 0.85rem;
   display: flex;
@@ -550,29 +561,6 @@ div.callout h2::after, .callout-title h2::after { display: none; }
   .pub-card { padding: 1.1rem 1.1rem 1rem; }
 }
 
-// ── Pillars, on the home page ──────────────────────────────────────────────
-.pillars {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 1.5rem;
-  margin: 1.75rem 0 2.25rem;
-}
-
-.pillar {
-  background: $card;
-  border: 1px solid $line;
-  border-radius: 18px;
-  padding: 1.4rem 1.4rem 1.5rem;
-  box-shadow: 0 2px 10px rgba(58, 50, 48, 0.045);
-
-  h3 {
-    font-size: 1.06rem;
-    margin: 0 0 0.55rem;
-    color: $coral-deep;
-  }
-  p { margin: 0; max-width: none; font-size: 0.93rem; line-height: 1.55; }
-}
-
 // ── Public repositories ────────────────────────────────────────────────────
 .repo-list { margin: 1.5rem 0 2.5rem; display: grid; gap: 1.25rem; }
 
@@ -717,7 +705,6 @@ p,
 .mission blockquote p { max-width: 46ch; }
 
 // Grids were sized for a narrow column; at full width they should use it.
-.pillars       { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
 .pub-featured  { grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }
 .skill-grid    { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
 .team-grid     { grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); }
@@ -871,4 +858,402 @@ p,
   width: 64px;
   height: auto;
   margin: 0 auto 0.85rem;
+}
+
+// ── Home page ──────────────────────────────────────────────────────────────
+// The home page is the only page with a composed layout rather than a column of
+// prose, so its rules live together here at the end of the file, after the
+// full-width block whose `max-width: none` they occasionally have to beat.
+
+// A band that escapes the page gutter AND Quarto's own grid inset. Ancestor
+// padding makes the usual negative-margin trick unreliable, so it is done
+// against the viewport instead. `clip` rather than `hidden`: hidden would turn
+// body into a scroll container and strand the sticky navbar.
+body { overflow-x: clip; }
+
+.full-bleed {
+  width: 100vw;
+  margin-inline: calc(50% - 50vw);
+}
+
+html { scroll-behavior: smooth; }
+
+// ── Hero ───────────────────────────────────────────────────────────────────
+// Two columns from the large breakpoint up. The copy is not given a measure cap
+// — the column itself is the measure, which keeps the full-width decision for
+// body text intact.
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: clamp(1.25rem, 3vw, 3rem);
+  align-items: center;
+  margin-bottom: 0.5rem;
+
+  @media (min-width: 992px) {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  }
+}
+
+.hero-copy { padding-block: 2.5rem 0.5rem; }
+.hero-copy .eyebrow { margin-bottom: 0.9rem; }
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  margin-top: 1.9rem;
+}
+
+// The second action. Quiet on purpose: two filled coral buttons side by side
+// would make neither of them the answer to "what do I click".
+.btn-quiet {
+  display: inline-block;
+  padding: 0.62rem 1.3rem;
+  border: 1.5px solid $line;
+  border-radius: 999px;
+  background: transparent;
+  color: $ink;
+  font-weight: 700;
+  text-decoration: none;
+  transition: border-color 160ms ease, color 160ms ease, background-color 160ms ease;
+
+  &:hover, &:focus-visible {
+    border-color: $coral;
+    color: $coral-deep;
+    background: $coral-wash;
+  }
+}
+
+.btn-on-dark {
+  border-color: rgba(255, 255, 255, 0.55);
+  color: #FFFFFF;
+
+  &:hover, &:focus-visible {
+    border-color: #FFFFFF;
+    background: rgba(255, 255, 255, 0.14);
+    color: #FFFFFF;
+  }
+}
+
+// One orchestrated entrance, on load, in the hero only. Everything further down
+// the page waits to be scrolled to.
+@keyframes rise-in {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: none; }
+}
+
+.hero-copy > *,
+.hero-grid .hero-figure {
+  animation: rise-in 620ms cubic-bezier(0.2, 0.7, 0.3, 1) backwards;
+}
+.hero-copy .eyebrow      { animation-delay: 40ms; }
+.hero-copy h1            { animation-delay: 130ms; }
+.hero-copy .lede         { animation-delay: 240ms; }
+.hero-copy .hero-actions { animation-delay: 340ms; }
+.hero-grid .hero-figure  { animation-delay: 300ms; animation-duration: 820ms; }
+
+.hero-grid .hero-figure { margin: 0; }
+
+// ── Scroll cue ─────────────────────────────────────────────────────────────
+// The one piece of motion that is not decoration: it says the page continues.
+// It removes itself as soon as that has been understood.
+.scroll-cue {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+  width: max-content;
+  margin: 0.75rem auto 0;
+  padding: 0.4rem 0.9rem;
+  color: $ink-soft;
+  font-family: $mono-font;
+  font-size: 0.66rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 999px;
+  opacity: 1;
+  transition: opacity 320ms ease, visibility 320ms;
+
+  &:hover, &:focus-visible { color: $coral-deep; }
+  svg { animation: cue-bob 2.4s ease-in-out infinite; }
+}
+
+.scroll-cue.is-gone { opacity: 0; visibility: hidden; }
+
+@keyframes cue-bob {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(5px); }
+}
+
+// ── Reveal ─────────────────────────────────────────────────────────────────
+// Applied only to the two composed blocks, not to every section: a page where
+// everything fades up on scroll reads as a template. `.motion` is added by
+// home-motion.js, so without JavaScript these are simply visible.
+.motion .reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 640ms ease, transform 640ms cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+.motion .reveal.is-in { opacity: 1; transform: none; }
+
+// Children stagger behind the block so the row assembles rather than appearing.
+.motion .reveal .loop-stage,
+.motion .reveal .route {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 520ms ease, transform 520ms cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+.motion .reveal.is-in .loop-stage,
+.motion .reveal.is-in .route { opacity: 1; transform: none; }
+
+.motion .reveal.is-in :is(.loop-stage, .route):nth-child(2) { transition-delay: 110ms; }
+.motion .reveal.is-in :is(.loop-stage, .route):nth-child(3) { transition-delay: 220ms; }
+
+// ── The loop ───────────────────────────────────────────────────────────────
+// Three stages and the arrow that makes them a cycle. The arrow is the point:
+// without it this is three departments in a row, which is what the heading
+// above it denies.
+.loop { margin: 1.75rem 0 2.5rem; }
+
+.loop-stages {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.loop-stage {
+  position: relative;
+  background: $card;
+  border: 1px solid $line;
+  border-radius: 18px;
+  padding: 1.4rem 1.4rem 1.5rem;
+  box-shadow: 0 2px 10px rgba(58, 50, 48, 0.045);
+
+  h3 {
+    font-size: 1.06rem;
+    margin: 0 0 0.55rem;
+    color: $coral-deep;
+  }
+  p { margin: 0; max-width: none; font-size: 0.93rem; line-height: 1.55; }
+}
+
+// The forward step, in the gap between cards. Drawn with a border rather than a
+// glyph so it cannot be read out or copied as text.
+@media (min-width: 880px) {
+  .loop-stage + .loop-stage::before {
+    content: "";
+    position: absolute;
+    left: -1.05rem;
+    top: 2.35rem;
+    width: 9px;
+    height: 9px;
+    border-top: 2px solid $coral;
+    border-right: 2px solid $coral;
+    transform: rotate(45deg);
+  }
+}
+
+.loop-return {
+  position: relative;
+  height: 86px;
+  margin-top: 0.25rem;
+}
+
+.loop-return-path {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.loop-return-line {
+  fill: none;
+  stroke: $coral;
+  stroke-width: 2;
+  stroke-linecap: round;
+  opacity: 0.75;
+  transition: stroke-dashoffset 1150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.loop-return-head {
+  fill: none;
+  stroke: $coral;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  opacity: 0;
+  transition: opacity 260ms ease 1000ms;
+}
+
+.loop-return-path.is-drawn .loop-return-head { opacity: 0.75; }
+
+// Sits on the bottom run of the path, carrying the cream through so the line
+// does not strike through the words.
+.loop-return-label {
+  position: absolute;
+  left: 50%;
+  bottom: -0.72rem;
+  transform: translateX(-50%);
+  margin: 0;
+  max-width: none;
+  padding: 0 0.85rem;
+  background: $cream;
+  color: $ink-soft;
+  font-family: $mono-font;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+// Stacked cards make a horizontal return path meaningless, so it goes and the
+// label carries the idea on its own.
+@media (max-width: 879px) {
+  .loop-return { height: auto; margin-top: 1.25rem; }
+  .loop-return-path { display: none; }
+  .loop-return-label {
+    position: static;
+    transform: none;
+    text-align: center;
+    padding: 0;
+    white-space: normal;
+  }
+}
+
+// ── The reel ───────────────────────────────────────────────────────────────
+// A full-bleed band of the lab's own photographs. The video is a loop of the
+// same group portraits that are on the gallery page, so nothing here is
+// load-bearing information — the poster alone tells the same story.
+.reel {
+  position: relative;
+  display: grid;
+  align-items: center;
+  min-height: clamp(300px, 44vh, 480px);
+  margin-block: 3rem;
+  overflow: hidden;
+  background: #2A211F;
+  isolation: isolate;
+}
+
+.reel-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+// Darkened from the left, where the words are, and left nearly clear on the
+// right so the faces stay visible. A flat scrim over the whole band would make
+// the photographs pointless.
+.reel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(100deg,
+              rgba(30, 22, 20, 0.88) 0%,
+              rgba(30, 22, 20, 0.72) 34%,
+              rgba(30, 22, 20, 0.30) 72%,
+              rgba(30, 22, 20, 0.18) 100%);
+  z-index: -1;
+}
+
+.reel-overlay {
+  padding: clamp(1.75rem, 5vw, 3.5rem);
+  max-width: 34rem;
+
+  h2 {
+    margin: 0 0 0.75rem;
+    color: #FFFFFF;
+    &::after { display: none; }     // the coral tick is a cream-ground device
+  }
+  p {
+    margin: 0 0 1.4rem;
+    max-width: 30rem;
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 0.97rem;
+  }
+}
+
+// ── Routes ─────────────────────────────────────────────────────────────────
+// Three ways further into the site. The picture is the invitation; the heading
+// is the link, so the image carries no duplicate tab stop.
+.routes {
+  list-style: none;
+  padding: 0;
+  margin: 1.75rem 0 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 1.75rem;
+}
+
+.route h3 {
+  margin: 1rem 0 0.4rem;
+  font-size: 1.12rem;
+
+  a { color: $ink; text-decoration: none; }
+  a:hover, a:focus-visible { color: $coral-deep; text-decoration: underline; }
+}
+
+.route p {
+  margin: 0;
+  max-width: none;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: $ink-soft;
+}
+
+.route-media {
+  display: block;
+  aspect-ratio: 8 / 5;
+  border-radius: 18px;
+  overflow: hidden;
+  background: $line;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 520ms cubic-bezier(0.2, 0.7, 0.3, 1);
+  }
+}
+
+.route:hover .route-media img { transform: scale(1.04); }
+
+// The publications route shows a rendered structure, not a photograph. It gets
+// a tinted plate and is fitted rather than cropped, because cropping a molecule
+// loses the molecule.
+.route-media-plate {
+  background: $coral-wash;
+
+  img {
+    object-fit: contain;
+    padding: 0.9rem;
+  }
+}
+.route:hover .route-media-plate img { transform: scale(1.03); }
+
+// ── Home page motion, switched off ─────────────────────────────────────────
+// The blanket rule earlier in this file neutralises durations, which is not
+// enough here: an animation with a delay and `backwards` fill would still hold
+// its element invisible for the length of the delay, and a reveal that is
+// waiting for JavaScript would never arrive.
+@media (prefers-reduced-motion: reduce) {
+  .hero-copy > *,
+  .hero-grid .hero-figure { animation: none !important; }
+
+  .motion .reveal,
+  .motion .reveal .loop-stage,
+  .motion .reveal .route { opacity: 1 !important; transform: none !important; }
+
+  .scroll-cue svg { animation: none !important; }
+  .route:hover .route-media img { transform: none; }
+  html { scroll-behavior: auto; }
 }

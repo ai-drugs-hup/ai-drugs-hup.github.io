@@ -32,6 +32,9 @@ function tintOf(name) {
 <% if (item.until) { %>
 <p class="member-until">Until <%= item.until %></p>
 <% } %>
+<% if (item.now) { %>
+<p class="member-now">Now at <%= item.now %></p>
+<% } %>
 </div>
 </li>
 <% } %>

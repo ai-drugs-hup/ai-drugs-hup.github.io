@@ -9,11 +9,17 @@
 #   team   "Principal investigator" | "AI team" | "MD team" | "Synthesis team"
 #          | "Alumni"
 #   photo  optional. Filename in assets/img/team/. Omit it and the card shows an initials circle.
+#          Each file is a 480x480 square cropped around the face. The originals
+#          Cong supplied are phone-sized and stay in resources/, which is
+#          gitignored: assets/img/ is published wholesale, so a full-resolution
+#          personal photograph left there would ship to the public repo.
 #   initials optional. Overrides the computed initials, which take the first and
 #          last word of the name — wrong when a Western given name is appended.
 #   links  optional. email / scholar / orcid / github
 #   until  optional, Alumni only. The year the person left the lab. Omit it rather
 #          than guess — the card drops the line when it is absent.
+#   now    optional, Alumni only. Where the person is now, as "Institution, Country".
+#          Same rule as `until`: omit rather than guess.
 #
 # ⚠️ Roles below describe what someone works on. Dr. Dung confirmed the lab is
 #    mostly students, so members default to "Student researcher".
@@ -21,27 +27,36 @@
 #    students (confirmed by Cong). Everyone else still carries the default and has
 #    NOT been confirmed one by one — correct any line that is wrong.
 
+# Lifted from the ceremony photograph in resources/ — she is at the lectern in the
+# purple áo dài — rather than from a portrait, because no portrait was supplied.
+# It is softer than the phone photos the students sent; a real portrait would be
+# better whenever one exists.
 - name: Đỗ Thị Mai Dung
+  photo: mai-dung.jpg
   role: Head of Unit · Lecturer, Faculty of Pharmaceutical Chemistry and Technology
   team: Principal investigator
   links:
     orcid: https://orcid.org/0000-0003-3326-2464
 
 - name: Nguyễn Thành Công
+  photo: cong-nguyen.jpg
   role: Master's student — machine learning
   team: AI team
   links:
     orcid: https://orcid.org/0000-0002-6247-8128
 
 - name: Hà Linh
+  photo: ha-linh.jpg
   role: Student researcher — machine learning
   team: AI team
 
 - name: Đào Minh Tùng
+  photo: minh-tung.jpg
   role: Student researcher — machine learning
   team: AI team
 
 - name: Dương Hoàng Khánh Uyên
+  photo: uyen-duong.jpg
   role: Student researcher — machine learning
   team: AI team
 
@@ -63,6 +78,7 @@
 # co-author but was never named as a member, so he has been removed.
 
 - name: Phạm Đức Dương
+  photo: duong-pham.jpg
   role: Student researcher — synthetic chemistry
   team: Synthesis team
 
@@ -70,7 +86,11 @@
   role: Student researcher — synthetic chemistry
   team: Synthesis team
 
+# ⚠️ The photo file Cong supplied is named tuan-phuong, and this is the only
+#    Phương on the roster — so the match is an inference, not something he
+#    stated. If it is the wrong person, delete the photo line.
 - name: Nguyễn Phương
+  photo: tuan-phuong.jpg
   role: Student researcher — synthetic chemistry
   team: Synthesis team
 
@@ -83,9 +103,11 @@
 # being listed here as a former member. That is consistent, not a contradiction.
 
 - name: Nguyễn Thảo My Kristýna
+  photo: thao-my.jpg
   role: Student researcher — machine learning
   team: Alumni
   until: 2026
+  now: PSL University, France
   # Otherwise computed as NK, from "Nguyễn" and "Kristýna".
   initials: NM
 
@@ -97,7 +119,18 @@
   team: Alumni
   until: 2024
 
+# ⚠️ Cong wrote "University of Hiroshima". No institution uses that English name;
+#    the one he almost certainly means is Hiroshima University (広島大学), which
+#    has the pharmaceutical sciences graduate school. Confirm before this is
+#    quoted anywhere that matters. Neither his leaving year nor his area was
+#    given, so both lines are absent rather than guessed.
+- name: Thái Chính Tâm
+  photo: thai-chinh-tam.jpg
+  team: Alumni
+  now: Hiroshima University, Japan
+
 - name: Trần Thị Thùy Mai
+  photo: thuy-mai.jpg
   role: Student researcher — molecular dynamics
   team: MD team
 
@@ -106,6 +139,7 @@
   team: MD team
 
 - name: Nguyễn Ngọc Hà
+  photo: ngoc-ha.jpg
   role: Student researcher — molecular dynamics
   team: MD team
 
@@ -114,9 +148,11 @@
   team: MD team
 
 - name: Khánh Linh
+  photo: khanh-linh.jpg
   role: Student researcher — molecular dynamics
   team: MD team
 
 - name: Huỳnh Minh Huy
+  photo: minh-huy.jpg
   role: Student researcher — molecular dynamics
   team: MD team
