@@ -28,7 +28,7 @@ project:
 
 website:
   title: "AI & Drug Design"
-  site-url: "https://ai-drugs.io.vn"
+  site-url: "https://ai-drugs-hup.github.io"
   description: "Unit of Computation and AI Application Research, Faculty of Pharmaceutical Chemistry and Technology, Hanoi University of Pharmacy."
   navbar:
     logo: assets/img/mark.svg
