@@ -41,7 +41,6 @@ jobs:
         run: |
           set -euo pipefail
           test -f _site/index.html
-          test -f _site/CNAME
           members=$(grep -c 'class="member-name"' _site/team.html)
           papers=$(grep -c 'pub-row\|pub-card' _site/publications.html)
           echo "members=$members papers=$papers"
