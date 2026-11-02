@@ -24,6 +24,12 @@ listing:
       team: "Synthesis team"
     template: assets/team-card.ejs
     sort: "name asc"
+  - id: ai-healthcare-team
+    contents: members.yml
+    include:
+      team: "AI in Healthcare"
+    template: assets/team-card.ejs
+    sort: "name asc"
   - id: alumni
     contents: members.yml
     include:
@@ -61,6 +67,14 @@ skills to every stage of discovery.
 ## Synthesising and testing {#synthesis-team-heading}
 
 :::: {#synthesis-team}
+
+::::
+
+[Healthcare]{.eyebrow}
+
+## Applying AI in healthcare {#ai-healthcare-team-heading}
+
+:::: {#ai-healthcare-team}
 
 ::::
 
