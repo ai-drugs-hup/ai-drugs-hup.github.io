@@ -7,7 +7,7 @@
 #   name   required. As the person wants it written, with diacritics.
 #   role   required. Job title, not team name.
 #   team   "Principal investigator" | "AI team" | "MD team" | "Synthesis team"
-#          | "Alumni"
+#          | "AI in Healthcare" | "Alumni"
 #   photo  optional. Filename in assets/img/team/. Omit it and the card shows an initials circle.
 #          Each file is a 480x480 square cropped around the face. The originals
 #          Cong supplied are phone-sized and stay in resources/, which is
@@ -23,8 +23,8 @@
 #
 # ⚠️ Roles below describe what someone works on. Dr. Dung confirmed the lab is
 #    mostly students, so members default to "Student researcher".
-#    CONFIRMED individually: Nguyễn Thành Công and Trần Tùng Lâm are master's
-#    students (confirmed by Cong). Everyone else still carries the default and has
+#    CONFIRMED individually: Trần Tùng Lâm is a master's
+#    student. Everyone else still carries the default and has
 #    NOT been confirmed one by one — correct any line that is wrong.
 
 # Lifted from the ceremony photograph in resources/ — she is at the lectern in the
@@ -37,13 +37,6 @@
   team: Principal investigator
   links:
     orcid: https://orcid.org/0000-0003-3326-2464
-
-- name: Nguyễn Thành Công
-  photo: cong-nguyen.jpg
-  role: Master's student — machine learning
-  team: AI team
-  links:
-    orcid: https://orcid.org/0000-0002-6247-8128
 
 - name: Hà Linh
   photo: ha-linh.jpg
@@ -93,6 +86,17 @@
   photo: tuan-phuong.jpg
   role: Student researcher — synthetic chemistry
   team: Synthesis team
+
+# Wet-lab member. No photo supplied, so the card shows initials.
+- name: Phạm Gia Khánh
+  role: Student researcher — wet lab
+  team: Synthesis team
+
+# ── AI in Healthcare team (new) ──────────────────────────────────────────────
+# No photo supplied, so the card shows initials.
+- name: Phương Bảo Châu
+  role: Student researcher — AI in healthcare
+  team: AI in Healthcare
 
 # ── Alumni ───────────────────────────────────────────────────────────────────
 # Former members. `role` is optional here: the card omits the line rather than
