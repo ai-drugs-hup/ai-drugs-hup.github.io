@@ -15,6 +15,18 @@
 #            Any such page must ALSO be added to the render whitelist in
 #            _quarto.yml, which is deliberately not a glob.
 
+- title: "Paper accepted in RSC Advances"
+  iso: 2026-11-04
+  when: "November 2026"
+  kind: Publication
+  summary: >
+    Our paper "Machine learning-guided design and synthesis of benzimidazole-based
+    HDAC inhibitors: prospective validation of a fine-tuned pretrained graph
+    transformer" has been accepted for publication in RSC Advances. The work, done
+    with collaborators including Dr. Daniel Baecker, combines a fine-tuned graph
+    transformer with synthesis and biological testing. The full citation will appear
+    on our Publications page once the DOI is issued.
+
 - title: "Hanoi University of Pharmacy establishes the Unit of Computation and AI Application Research"
   iso: 2025-10-24
   when: "24 October 2025"
